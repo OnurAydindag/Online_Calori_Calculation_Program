@@ -29,7 +29,7 @@
   - lunch_id
   - user_id
   - meal_id
-  - meal_miktar
+  - meal_serving
   - date
 - Dinner
   - dinner_id

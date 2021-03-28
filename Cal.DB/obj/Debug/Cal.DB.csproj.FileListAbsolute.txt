@@ -1,0 +1,6 @@
+C:\Users\oktay\source\repos\Cal.UI\Cal.DB\bin\Debug\Cal.DB.dll
+C:\Users\oktay\source\repos\Cal.UI\Cal.DB\bin\Debug\Cal.DB.pdb
+C:\Users\oktay\source\repos\Cal.UI\Cal.DB\obj\Debug\Cal.DB.csprojAssemblyReference.cache
+C:\Users\oktay\source\repos\Cal.UI\Cal.DB\obj\Debug\Cal.DB.csproj.CoreCompileInputs.cache
+C:\Users\oktay\source\repos\Cal.UI\Cal.DB\obj\Debug\Cal.DB.dll
+C:\Users\oktay\source\repos\Cal.UI\Cal.DB\obj\Debug\Cal.DB.pdb

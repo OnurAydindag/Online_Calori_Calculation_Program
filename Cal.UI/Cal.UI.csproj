@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="MainPage.aspx" />
     <Content Include="tasarim\accordion.html" />
     <Content Include="tasarim\assets\css\animate.css\css\animate.css" />
     <Content Include="tasarim\assets\css\bootstrap\css\bootstrap.min.css" />
@@ -265,6 +266,13 @@
     </Compile>
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

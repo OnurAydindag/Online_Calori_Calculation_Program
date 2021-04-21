@@ -105,13 +105,13 @@
 
                         <form class="md-float-material form-material">
                             <div class="text-center">
-                               <h2>Kalori Cetveli</h2>
+                               <h2>Online Calori Calculating Program</h2>
                             </div>
                             <div class="auth-box card">
                                 <div class="card-block">
                                     <div class="row m-b-20">
                                         <div class="col-md-12">
-                                            <h3 class="text-center">Kullanıcı Girişi</h3>
+                                            <h3 class="text-center">User Login</h3>
                                         </div>
                                     </div>
                                     <div class="form-group form-primary">
@@ -122,12 +122,12 @@
                                     <div class="form-group form-primary">
                                         <input type="password" name="password" class="form-control">
                                         <span class="form-bar"></span>
-                                        <label class="float-label">Şifre</label>
+                                        <label class="float-label">Password</label>
                                     </div>
                                     
                                     <div class="row m-t-30">
                                         <div class="col-md-12">
-                                            <button type="button" class="btn girisBtn btn-md btn-block waves-effect waves-light text-center m-b-20">Giriş</button>
+                                            <button type="button" class="btn girisBtn btn-md btn-block waves-effect waves-light text-center m-b-20">Login</button>
                                         </div>
                                     </div>
                                   

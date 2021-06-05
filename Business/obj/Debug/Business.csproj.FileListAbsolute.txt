@@ -1,6 +1,0 @@
-C:\Users\oktay\source\repos\Cal.UI\Business\bin\Debug\Business.dll
-C:\Users\oktay\source\repos\Cal.UI\Business\bin\Debug\Business.pdb
-C:\Users\oktay\source\repos\Cal.UI\Business\obj\Debug\Business.csprojAssemblyReference.cache
-C:\Users\oktay\source\repos\Cal.UI\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
-C:\Users\oktay\source\repos\Cal.UI\Business\obj\Debug\Business.dll
-C:\Users\oktay\source\repos\Cal.UI\Business\obj\Debug\Business.pdb

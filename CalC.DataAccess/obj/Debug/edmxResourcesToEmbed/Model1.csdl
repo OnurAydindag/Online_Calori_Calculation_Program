@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cal.dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="breakfast">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="food_id" Type="Int32" Nullable="false" />
+    <Property Name="serving" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="foods" Relationship="Self.FK_breakfast_foods" FromRole="breakfast" ToRole="foods" />
+    <NavigationProperty Name="user" Relationship="Self.FK_breakfast_user" FromRole="breakfast" ToRole="user" />
+  </EntityType>
+  <EntityType Name="dinner">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="food_id" Type="Int32" Nullable="false" />
+    <Property Name="serving" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="foods" Relationship="Self.FK_dinner_foods" FromRole="dinner" ToRole="foods" />
+    <NavigationProperty Name="user" Relationship="Self.FK_dinner_user" FromRole="dinner" ToRole="user" />
+  </EntityType>
+  <EntityType Name="foods">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="calori" Type="Int32" />
+    <NavigationProperty Name="breakfast" Relationship="Self.FK_breakfast_foods" FromRole="foods" ToRole="breakfast" />
+    <NavigationProperty Name="dinner" Relationship="Self.FK_dinner_foods" FromRole="foods" ToRole="dinner" />
+    <NavigationProperty Name="lunch" Relationship="Self.FK_lunch_foods" FromRole="foods" ToRole="lunch" />
+  </EntityType>
+  <EntityType Name="lunch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="food_id" Type="Int32" Nullable="false" />
+    <Property Name="serving" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="foods" Relationship="Self.FK_lunch_foods" FromRole="lunch" ToRole="foods" />
+    <NavigationProperty Name="user" Relationship="Self.FK_lunch_user" FromRole="lunch" ToRole="user" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_weight" Type="Int32" Nullable="false" />
+    <Property Name="user_height" Type="Int32" Nullable="false" />
+    <Property Name="user_mail" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="user_password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="breakfast" Relationship="Self.FK_breakfast_user" FromRole="user" ToRole="breakfast" />
+    <NavigationProperty Name="dinner" Relationship="Self.FK_dinner_user" FromRole="user" ToRole="dinner" />
+    <NavigationProperty Name="lunch" Relationship="Self.FK_lunch_user" FromRole="user" ToRole="lunch" />
+  </EntityType>
+  <Association Name="FK_breakfast_foods">
+    <End Role="foods" Type="Self.foods" Multiplicity="1" />
+    <End Role="breakfast" Type="Self.breakfast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="foods">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="breakfast">
+        <PropertyRef Name="food_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_breakfast_user">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="breakfast" Type="Self.breakfast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="breakfast">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dinner_foods">
+    <End Role="foods" Type="Self.foods" Multiplicity="1" />
+    <End Role="dinner" Type="Self.dinner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="foods">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="dinner">
+        <PropertyRef Name="food_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dinner_user">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="dinner" Type="Self.dinner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="dinner">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lunch_foods">
+    <End Role="foods" Type="Self.foods" Multiplicity="1" />
+    <End Role="lunch" Type="Self.lunch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="foods">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="lunch">
+        <PropertyRef Name="food_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lunch_user">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="lunch" Type="Self.lunch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="lunch">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="breakfast" EntityType="Self.breakfast" />
+    <EntitySet Name="dinner" EntityType="Self.dinner" />
+    <EntitySet Name="foods" EntityType="Self.foods" />
+    <EntitySet Name="lunch" EntityType="Self.lunch" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <AssociationSet Name="FK_breakfast_foods" Association="Self.FK_breakfast_foods">
+      <End Role="foods" EntitySet="foods" />
+      <End Role="breakfast" EntitySet="breakfast" />
+    </AssociationSet>
+    <AssociationSet Name="FK_breakfast_user" Association="Self.FK_breakfast_user">
+      <End Role="user" EntitySet="user" />
+      <End Role="breakfast" EntitySet="breakfast" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dinner_foods" Association="Self.FK_dinner_foods">
+      <End Role="foods" EntitySet="foods" />
+      <End Role="dinner" EntitySet="dinner" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dinner_user" Association="Self.FK_dinner_user">
+      <End Role="user" EntitySet="user" />
+      <End Role="dinner" EntitySet="dinner" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lunch_foods" Association="Self.FK_lunch_foods">
+      <End Role="foods" EntitySet="foods" />
+      <End Role="lunch" EntitySet="lunch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lunch_user" Association="Self.FK_lunch_user">
+      <End Role="user" EntitySet="user" />
+      <End Role="lunch" EntitySet="lunch" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

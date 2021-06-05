@@ -1,0 +1,15 @@
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\CalC.Business.dll.config
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\CalC.Business.dll
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\CalC.Business.pdb
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\CalC.DataAccess.dll
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\EntityFramework.dll
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\CalC.DataAccess.pdb
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\CalC.DataAccess.dll.config
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\EntityFramework.xml
+C:\Users\oktay\source\repos\CalC\CalC.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\oktay\source\repos\CalC\CalC.Business\obj\Debug\CalC.Business.csprojAssemblyReference.cache
+C:\Users\oktay\source\repos\CalC\CalC.Business\obj\Debug\CalC.Business.csproj.CoreCompileInputs.cache
+C:\Users\oktay\source\repos\CalC\CalC.Business\obj\Debug\CalC.Business.csproj.CopyComplete
+C:\Users\oktay\source\repos\CalC\CalC.Business\obj\Debug\CalC.Business.dll
+C:\Users\oktay\source\repos\CalC\CalC.Business\obj\Debug\CalC.Business.pdb
